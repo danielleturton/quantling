@@ -9,9 +9,9 @@ output:
     theme: cosmo
 ---
   
-You can find the slides from the first part of class [here](HSS8005_session1_slides_2018-19.html){target="_blank"}.
+You can find the slides from the first part of class [here](HSS8005_session1_slides_2018-19.html){target="_blank"} or in [pdf here](https://github.com/danielleturton/quantling/blob/master/slides/HSS8005_session1_slides_2018-19.pdf){target="_blank"} 
 
-You can download the R notebook code (the output of which is this document) at the link by right clicking [here](HSS8005_session1_notebook_2018-19.Rmd) and choosing *save link/target as*.
+You can download the R notebook code (the output of which is this document) at the link by right clicking [here](https://raw.githubusercontent.com/danielleturton/quantling/master/HSS8005_session1_notebook_2018-19.Rmd) and choosing *save link/target as*.
 
 This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
 
