@@ -1,10 +1,8 @@
 ---
 title: 'HSS8005 Stream C: Introduction to Quantitative Linguistics'
-author: "Dr Danielle Turton: danielle.turton@newcastle.ac.uk"
-date:
+author: 'Dr Danielle Turton: danielle.turton@newcastle.ac.uk'
 output:
   ioslides_presentation: default
-  beamer_presentation: default
 ---
 
 ```{r setup, include=FALSE}
@@ -175,13 +173,15 @@ colnames(dialect_data)
 
 
 ## Download the materials for today's class here
-
+https://danielleturton.github.io/quantling
 
 
 ***
 ## Packages
+
 * What are packages?
 * The first time you use them, you will need to install the packages (you only need to do this once)
+
 ```{r, echo = TRUE, eval = FALSE}
 install.packages("dplyr")
 install.packages("ggplot2")
