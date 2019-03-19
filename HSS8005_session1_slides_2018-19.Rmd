@@ -37,6 +37,13 @@ This course is:
 * Next Thursday: Data wrangling, advanced visualisation, statistical tests and requests!
 
 ***
+## Class website
+You can follow the class website here:
+https://danielleturton.github.io/quantling
+
+All of the materials we'll be using can be found here.
+
+***
 ## What is your research?
 
 * Who are you and what do you want to analyse?

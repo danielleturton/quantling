@@ -11,6 +11,8 @@ output:
   
 You can find the slides from the first part of class [here](HSS8005_session1_slides_2018-19.html){target="_blank"}.
 
+You can download the R notebook code (the output of which is this document) at the link [here](HSS8005_session1_notebook_2018-19.Rmd)
+
 This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
 
 Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
