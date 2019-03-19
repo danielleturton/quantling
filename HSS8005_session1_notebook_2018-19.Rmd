@@ -1,0 +1,177 @@
+---
+title: "HSS8005: Quantitative Linguistics - Session 1 notebook"
+author: Semester 2 2018-19, Danielle Turton
+output: 
+  html_notebook:
+    toc: true
+    toc_depth: 2
+    toc_float: true
+    theme: cosmo
+---
+  
+You can find the slides from the first part of class [here](HSS8005_session1_slides_2018-19.html){target="_blank"}.
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+1+3
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.  
+
+You can *Knit* your document to pdf and Word too.
+
+# Today's Session
+Today, we're going to be analysing categorical data from the dialect dataset discussed in class.  The questions asked as part of this dialect survey should be available on the course website.
+
+## Folder set-up
+I recommend you create a folder called *HSS8005C* with four subfolders: *Session 1, Session 2, Session 3* and *Session 4*.
+
+## Packages
+The first thing we want to do before we start is load in the relevant packages for today.  The following code should do the job:
+```{r}
+## LOAD PACKAGES ####
+library(dplyr) # this is a package that makes handling data easier
+library(ggplot2) # this is a package that makes nice graphs
+```
+You might see some messages, but that is fine.
+
+However, if this doesn't work, you may need to install the packages.  You only have to install a package once, but you have load a package in (like we just did above) every time you open R.  To install a package for the first time, you can go to ** tools > install packages... >** and then search for the name of the package.  You can also run it directly through the console by inputting `install.packages("dplyr")`.
+
+
+## Dialect data
+Save the data itself in the same folder as this R Notebook document. That means we can easily load it in without having to specify the full path (i.e. location) of the document.  Try pressing play on the chunk below to read in the data:
+  
+```{r}
+## LOAD IN DATA ####
+dialect_data = read.csv("HSS8005_dialectdata.csv")
+```
+We have called our dataset `dialect_data` and we should now be able to see it in the right corner panel under **Environment** as one of the things we have loaded in.
+
+
+Let's look at our data to get a feel for what is in there:
+```{r}
+dim(dialect_data)
+```
+How many rows and columns does the data have?
+
+Let's have a look at the top six rows:
+```{r}
+head(dialect_data)
+```
+
+How about the bottom six?
+```{r}
+tail(dialect_data)
+```
+
+What are the names of the columns?
+```{r}
+colnames(dialect_data)
+```
+Note that the column names all have lower case titles.  R does not treat uppercase and lower case the same!  This is the advice given by Hadley Wickham in his R style guide: (http://stat405.had.co.nz/r-style.html).Instead of a space, use and underscore.  R will not allow spaces in column names.
+
+
+Let's use the `levels()` function from to take a closer look at some of the columns.
+```{r}
+# Look at factor levels for some columns
+levels(dialect_data$foot_strut)
+levels(dialect_data$give_it_me)
+```
+
+The dollar sign is very important in R, as it references a specific column.  For the two columns we've referenced in the above example, R shows us the range of possible variants or **factor levels**.  For the factor `foot_strut` the possible answers, are therefore factor levels, are `rhyme` and `don't rhyme`.  For the factor `give_it_me`, there are five possible answers, as shown by the five factor levels.
+
+Try it yourself on some more variables.  Insert a chunk below this line by going to **Insert > R** and running a line of code which will reveal the factor levels of a factor we haven't looked at yet.  Note that factors are for categorical variables, so this won't work if your variable is continuous.
+
+
+
+
+# Data summaries: Making tables
+
+Let's say we want to see how many of our respondents have said that "foot" and "strut" rhyme, and how many say they don't.  We can do this easily using the table function in R.  Note that we use the dollar sign $ again to denote the specific `foot_strut` column within the `dialect_data` dataset.
+
+```{r}
+table(dialect_data$foot_strut)
+```
+
+This would be our dependent variable, but can we think of a possible independent variable we'd want to look at too?  We can add this in simply by adding another instruction to the table.  Let's try this with speaker age group (categorical):
+  
+```{r}
+table(dialect_data$foot_strut, dialect_data$age_group)
+```
+Note, we also have the specific speaker age (continuous), but that's going to be difficult to visualise in a table, so we'll leave that for now.
+
+Try this below for a different independent variable of your choice:
+  
+```{r}
+#your code here for your choice of independent variable
+```
+
+These numbers are not ideal in terms of presenting a result to our audience.  We really want to be showing them the percentage of speakers who say rhyme and don't rhyme, rather than the raw numbers.  How can we do this?
+
+There are always numerous ways to do things in R.  Sometimes, I'll use the functions that come installed with basic R, other times I'll be showing you additional packages that we can install that will make our lives easier.
+
+### Basic proportional tables 
+
+The first step to making a proportional table would be saving our current table as a variable in R.  
+
+```{r}
+foot_strut.tab = table(dialect_data$foot_strut, dialect_data$age_group)
+```
+
+Once you run this code, you should be able to see your new `foot_strut.tab` in the right hand corner *environment* window.  I like to call it R's brain.  You have now saved `foot_strut.tab` in R's brain and you can call it up whenever you want during the session. Let's try it now by running the code below:
+  
+```{r}
+foot_strut.tab 
+```
+Note that I have given it a `.tab` at the end of its name.  Once you get going, you'll have potentially hundreds of things stored in R's brain.  So by giving them names with `.tab` on the end for tables or `.plot` on the end for plots, you'll make life a bit easier for yourself in the long run.
+
+OK, so how do we make a percentage table, or a proportional table?  We can do this with the `prop.table` function:
+```{r}
+prop.table(foot_strut.tab, 2) 
+```
+This gives us the breakdown in percentages.  Is the `foot_strut` variable changing over time between old, middle and young people's speech?
+  
+Let's save this in R's brain:
+```{r}
+foot_strut.prop.tab = prop.table(foot_strut.tab, 2) 
+```
+
+What does the `,2` bit mean at the end of the call though?  This tells R to divide the proportions using the *second* variable of the table call, not the first.  That is, we want to divide each value by the total of the *young, middle and old* columns, and not by the *don't rhyme/rhyme rows*.  We always want to divide by the independent variable.  Why is this?
+
+Take a look at what happens when you try to divide by the first variable of the table call:
+```{r}
+# WRONG WAY AROUND
+prop.table(foot_strut.tab, 1) 
+```
+What is wrong with this?  
+
+This is a very important thing to remember.  We want the independent variable column to be the one that adds up to 100%, to ensure that in cases like these where we have many more participants in one category (young) than another (old) our proportions work our correctly.  
+
+Note that, if our original table call had put `age_group` before `foot_strut`, the number would actually be `1`.  It's whatever position the independent variable is in.
+
+Ideally, the table you'll present to your reader will have percentages in, but also a row below with the totals for each column.
+
+
+# Challenge
+Open up a blank RStudio script by going to **File > New File > R Script...**.  Save it as *HSS8005_session1_script* in the same folder as your other files.
+
+Try retyping (or copy and pasting) all of the commands you've run above and getting them to work in your own document, instead of relying on this workbook. Execute the command by clicking **Run** or typying Command + Enter.
+
+
+# R markdown
+You can convert this entire notebook into a pdf, html or Word document by going to the little triangle drop-down menu next to **Preview** and choosing one of the **Knit to...** options.  This is how I'd like you to submit your assessment for class, but it is also handy for writing up your quantitative work, as your R code is embedded in your document.
+
+As you start to publish your work, you won't want the R code itself to show, but just the output.  This is easy to do by setting the option `echo = FALSE`.  Try previewing the document, or knitting the document to pdf, html or word, and compare the chunk below with earlier ones:
+```{r, echo=FALSE}
+1+3
+```
+Can you see this stops it from replicating the code?
+  
+  Markdown is a very simple language.  You use *stars for italics*, and you use **double stars for bold**.  Hashes indicate new sections and the level of that section (i.e. two hashes are a subsection).  Check out the R markdown cheatsheet [here](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf).  You can see I just made a clickable link in the previous sentence.  Have a look at what that looks like in your knitted output.  For your next task, have a play around with different options in R markdown.
