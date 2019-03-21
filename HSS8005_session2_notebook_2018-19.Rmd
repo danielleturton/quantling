@@ -11,7 +11,7 @@ output:
 
 You can download the R notebook code (the output of which is this document) at the link by right clicking [here](HERE) and choosing *save link/target as*.  Store it in the same folder as last time.
 
-You should already have the dialect data downloaded, but if not you can find it [here](HERE) and choosing *save link/target as*.
+You should already have the dialect data downloaded, but if not you can find it [here](https://github.com/danielleturton/quantling/raw/master/HSS8005_dialectdata.csv) and choosing *save link/target as*.
 
 
 This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
