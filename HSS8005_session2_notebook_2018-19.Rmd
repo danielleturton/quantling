@@ -1,15 +1,19 @@
 ---
-title: "HSS8005: Quantitative Linguistics - Session 2 notebook"
-author: Semester 2 2018-19, Danielle Turton
-output: 
+title: 'HSS8005: Quantitative Linguistics - Session 2 notebook'
+author: "Semester 2 2018-19, Danielle Turton"
+output:
+  html_document:
+    df_print: paged
+    toc: yes
+    toc_depth: '2'
   html_notebook:
-    toc: true
-    toc_depth: 2
-    toc_float: true
     theme: cosmo
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
 ---
 
-You can download the R notebook code (the output of which is this document) at the link by right clicking [here](HERE) and choosing *save link/target as*.  Store it in the same folder as last time.
+You can download the R notebook code (the output of which is this document) at the link by right clicking [here](https://github.com/danielleturton/quantling/raw/master/HSS8005_session2_notebook_2018-19.Rmd) and choosing *save link/target as*.  Store it in the same folder as last time.
 
 You should already have the dialect data downloaded, but if not you can find it [here](https://github.com/danielleturton/quantling/raw/master/HSS8005_dialectdata.csv) and choosing *save link/target as*.
 

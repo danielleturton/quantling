@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+<meta name="author" content="Semester 2 2018-19, Danielle Turton" />
+
+
+<title>HSS8005: Quantitative Linguistics - Session 2 notebook</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Introduction to Quantitative Linguistics</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Overview</a>
+</li>
+<li>
+  <a href="HSS8005_session1_notebook_2018-19.nb.html">Session 1</a>
+</li>
+<li>
+  <a href="HSS8005_session2_notebook_2018-19.nb.html">Session 2</a>
+</li>
+<li>
+  <a href="tbc.html">Session 3</a>
+</li>
+<li>
+  <a href="tbc.html">Session 4</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">HSS8005: Quantitative Linguistics - Session 2 notebook</h1>
+<h4 class="author"><em>Semester 2 2018-19, Danielle Turton</em></h4>
+
+</div>
+
+<div id="TOC">
+<ul>
+<li><a href="#todays-session">Today’s Session</a><ul>
+<li><a href="#packages">Packages</a></li>
+<li><a href="#load-in-dialect-data">Load in dialect data</a></li>
+</ul></li>
+<li><a href="#data-summaries-making-tables">Data summaries: Making tables</a><ul>
+<li><a href="#making-summary-tables-with-dplyr">Making summary tables with <code>dplyr</code></a></li>
+</ul></li>
+<li><a href="#plots">Plots</a><ul>
+<li><a href="#base-r-graphics">Base R graphics</a></li>
+<li><a href="#plots-in-ggplot2">Plots in <code>ggplot2</code></a></li>
+</ul></li>
+<li><a href="#challenge---stepping-away-from-the-notebook">Challenge - stepping away from the Notebook</a></li>
+<li><a href="#r-markdown">R markdown</a></li>
+</ul>
+</div>
+
+<p>You can download the R notebook code (the output of which is this document) at the link by right clicking <a href="https://github.com/danielleturton/quantling/raw/master/HSS8005_session2_notebook_2018-19.Rmd">here</a> and choosing <em>save link/target as</em>. Store it in the same folder as last time.</p>
+<p>You should already have the dialect data downloaded, but if not you can find it <a href="https://github.com/danielleturton/quantling/raw/master/HSS8005_dialectdata.csv">here</a> and choosing <em>save link/target as</em>.</p>
+<p>This is an <a href="http://rmarkdown.rstudio.com">R Markdown</a> Notebook. When you execute code within the notebook, the results appear beneath the code.</p>
+<p>Try executing this chunk by clicking the <em>Run</em> button within the chunk or by placing your cursor inside it and pressing <em>Cmd+Shift+Enter</em>.</p>
+<pre class="r"><code>1+3</code></pre>
+<pre><code>## [1] 4</code></pre>
+<p>Add a new chunk by clicking the <em>Insert Chunk</em> button on the toolbar or by pressing <em>Cmd+Option+I</em>.</p>
+<p>When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the <em>Preview</em> button or press <em>Cmd+Shift+K</em> to preview the HTML file).</p>
+<p>The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike <em>Knit</em>, <em>Preview</em> does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.</p>
+<p>You can <em>Knit</em> your document to pdf and Word too.</p>
+<div id="todays-session" class="section level1">
+<h1>Today’s Session</h1>
+<p>Today, we’re to go over some basic info on operators such as:</p>
+<ul>
+<li>=</li>
+<li>&lt;-</li>
+<li>$</li>
+<li><h1 id="section"></h1></li>
+</ul>
+<p>and then revisit some of our table summaries from earlier this week. Then we’ll make some plots.</p>
+<div id="packages" class="section level2">
+<h2>Packages</h2>
+<p>The first thing we want to do, as usual, is load in the relevant packages for today. The following code should do the job:</p>
+<pre class="r"><code>## LOAD PACKAGES ####
+library(dplyr) # this is a package that makes handling data easier</code></pre>
+<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 3.3.2</code></pre>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<pre class="r"><code>library(ggplot2) # this is a package that makes nice graphs</code></pre>
+<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 3.3.2</code></pre>
+<p>You might see some messages, but that is fine.</p>
+<p>Again, if this doesn’t work, you may need to install the packages. You only have to install a package once, but you have load a package in (like we just did above) every time you open R. To install a package for the first time, you can go to ** tools &gt; install packages… &gt;** and then search for the name of the package. You can also run it directly through the console by inputting <code>install.packages(&quot;dplyr&quot;)</code>.</p>
+</div>
+<div id="load-in-dialect-data" class="section level2">
+<h2>Load in dialect data</h2>
+<p>You should have saved the data itself in the same folder as this R Notebook document. That means we can easily load it in without having to specify the full path (i.e. location) of the document. Try pressing play on the chunk below to read in the data:</p>
+<pre class="r"><code>## LOAD IN DATA ####
+dialect_data = read.csv(&quot;HSS8005_dialectdata.csv&quot;)</code></pre>
+<p>We have called our dataset <code>dialect_data</code> and we should now be able to see it in the right corner panel under <strong>Environment</strong> as one of the things we have loaded in.</p>
+<p>Let’s do our usual checking:</p>
+<pre class="r"><code>dim(dialect_data)</code></pre>
+<pre><code>## [1] 6596   34</code></pre>
+<p>Let’s have a look at the top six rows:</p>
+<pre class="r"><code>head(dialect_data)</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["sex"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["occupation"],"name":[2],"type":["fctr"],"align":["left"]},{"label":["age"],"name":[3],"type":["int"],"align":["right"]},{"label":["age_group"],"name":[4],"type":["fctr"],"align":["left"]},{"label":["town"],"name":[5],"type":["fctr"],"align":["left"]},{"label":["postcode_birth"],"name":[6],"type":["fctr"],"align":["left"]},{"label":["postcode_now"],"name":[7],"type":["fctr"],"align":["left"]},{"label":["bread"],"name":[8],"type":["fctr"],"align":["left"]},{"label":["furniture"],"name":[9],"type":["fctr"],"align":["left"]},{"label":["clothing"],"name":[10],"type":["fctr"],"align":["left"]},{"label":["evening_meal"],"name":[11],"type":["fctr"],"align":["left"]},{"label":["group"],"name":[12],"type":["fctr"],"align":["left"]},{"label":["foot_strut"],"name":[13],"type":["fctr"],"align":["left"]},{"label":["for_more"],"name":[14],"type":["fctr"],"align":["left"]},{"label":["one_gone"],"name":[15],"type":["fctr"],"align":["left"]},{"label":["book_spook"],"name":[16],"type":["fctr"],"align":["left"]},{"label":["fur_bear"],"name":[17],"type":["fctr"],"align":["left"]},{"label":["sauce_source"],"name":[18],"type":["fctr"],"align":["left"]},{"label":["pour_poor"],"name":[19],"type":["fctr"],"align":["left"]},{"label":["eight_ate"],"name":[20],"type":["fctr"],"align":["left"]},{"label":["bangor_banger"],"name":[21],"type":["fctr"],"align":["left"]},{"label":["mute_moot"],"name":[22],"type":["fctr"],"align":["left"]},{"label":["spa_spar"],"name":[23],"type":["fctr"],"align":["left"]},{"label":["thin_fin"],"name":[24],"type":["fctr"],"align":["left"]},{"label":["give_it_me"],"name":[25],"type":["fctr"],"align":["left"]},{"label":["I_done_it"],"name":[26],"type":["fctr"],"align":["left"]},{"label":["it_was"],"name":[27],"type":["fctr"],"align":["left"]},{"label":["you_was"],"name":[28],"type":["fctr"],"align":["left"]},{"label":["beaches_was"],"name":[29],"type":["fctr"],"align":["left"]},{"label":["I_werent"],"name":[30],"type":["lgl"],"align":["right"]},{"label":["they_was"],"name":[31],"type":["fctr"],"align":["left"]},{"label":["we_was"],"name":[32],"type":["fctr"],"align":["left"]},{"label":["dress_what"],"name":[33],"type":["lgl"],"align":["right"]},{"label":["things_what"],"name":[34],"type":["fctr"],"align":["left"]}],"data":[{"1":"female","2":"Teacher","3":"32","4":"young","5":"Bishopton, Renfrewshire, Scotland, UK","6":"PA7","7":"2021","8":"roll","9":"couch","10":"trousers","11":"dinner","12":"you all","13":"don't rhyme","14":"don't rhyme","15":"don't rhyme","16":"rhyme","17":"don't rhyme","18":"don't rhyme","19":"different","20":"same","21":"different","22":"different","23":"different","24":"different","25":"c. I've heard some people use this form.","26":"b. I wouldn't use it, but people from my area do.","27":"c. I've heard some people use this form.","28":"c. I've heard some people use this form.","29":"d. A speaker of English might say this, but I haven't really heard it.","30":"NA","31":"c. I've heard some people use this form.","32":"c. I've heard some people use this form.","33":"NA","34":"c. I've heard some people use this form.","_rn_":"1"},{"1":"female","2":"Government Administrator","3":"47","4":"middle","5":"Dumbarton","6":"G82","7":"AB22","8":"roll","9":"sofa","10":"trousers","11":"dinner","12":"you","13":"don't rhyme","14":"don't rhyme","15":"don't rhyme","16":"rhyme","17":"don't rhyme","18":"don't rhyme","19":"different","20":"same","21":"different","22":"different","23":"different","24":"different","25":"d. A speaker of English might say this, but I haven't really heard it.","26":"b. I wouldn't use it, but people from my area do.","27":"c. I've heard some people use this form.","28":"d. A speaker of English might say this, but I haven't really heard it.","29":"d. A speaker of English might say this, but I haven't really heard it.","30":"NA","31":"c. I've heard some people use this form.","32":"c. I've heard some people use this form.","33":"NA","34":"d. A speaker of English might say this, but I haven't really heard it.","_rn_":"2"},{"1":"male","2":"Management Consultant","3":"61","4":"old","5":"EDNBURGH","6":"EH15","7":"AL2","8":"roll","9":"settee","10":"trousers","11":"dinner","12":"you","13":"don't rhyme","14":"don't rhyme","15":"don't rhyme","16":"rhyme","17":"don't rhyme","18":"don't rhyme","19":"different","20":"same","21":"different","22":"different","23":"different","24":"same","25":"d. A speaker of English might say this, but I haven't really heard it.","26":"c. I've heard some people use this form.","27":"d. A speaker of English might say this, but I haven't really heard it.","28":"c. I've heard some people use this form.","29":"d. A speaker of English might say this, but I haven't really heard it.","30":"NA","31":"c. I've heard some people use this form.","32":"c. I've heard some people use this form.","33":"NA","34":"c. I've heard some people use this form.","_rn_":"3"},{"1":"female","2":"student","3":"19","4":"young","5":"wigan","6":"WA3","7":"B5","8":"barm","9":"couch","10":"pants","11":"dinner","12":"you lot","13":"rhyme","14":"don't rhyme","15":"rhyme","16":"rhyme","17":"don't rhyme","18":"rhyme","19":"different","20":"same","21":"different","22":"different","23":"same","24":"different","25":"a. I'd say this myself.","26":"b. I wouldn't use it, but people from my area do.","27":"d. A speaker of English might say this, but I haven't really heard it.","28":"a. I'd say this myself.","29":"d. A speaker of English might say this, but I haven't really heard it.","30":"NA","31":"d. A speaker of English might say this, but I haven't really heard it.","32":"d. A speaker of English might say this, but I haven't really heard it.","33":"NA","34":"a. I'd say this myself.","_rn_":"4"},{"1":"male","2":"Accountant","3":"34","4":"young","5":"Bellshill\\nAtherstone","6":"CV9","7":"B79","8":"roll","9":"couch","10":"trousers","11":"dinner","12":"you","13":"don't rhyme","14":"don't rhyme","15":"don't rhyme","16":"rhyme","17":"don't rhyme","18":"don't rhyme","19":"different","20":"same","21":"different","22":"different","23":"different","24":"same","25":"b. I wouldn't use it, but people from my area do.","26":"d. A speaker of English might say this, but I haven't really heard it.","27":"c. I've heard some people use this form.","28":"c. I've heard some people use this form.","29":"c. I've heard some people use this form.","30":"NA","31":"c. I've heard some people use this form.","32":"c. I've heard some people use this form.","33":"NA","34":"c. I've heard some people use this form.","_rn_":"5"},{"1":"male","2":"Retired","3":"63","4":"old","5":"Bristol","6":"BS8","7":"BA12","8":"roll","9":"sofa","10":"trousers","11":"dinner","12":"you","13":"don't rhyme","14":"don't rhyme","15":"don't rhyme","16":"don't rhyme","17":"don't rhyme","18":"rhyme","19":"same","20":"same","21":"different","22":"different","23":"same","24":"different","25":"c. I've heard some people use this form.","26":"b. I wouldn't use it, but people from my area do.","27":"b. I wouldn't use it, but people from my area do.","28":"c. I've heard some people use this form.","29":"c. I've heard some people use this form.","30":"NA","31":"b. I wouldn't use it, but people from my area do.","32":"c. I've heard some people use this form.","33":"NA","34":"b. I wouldn't use it, but people from my area do.","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<p>How about the bottom six?</p>
+<pre class="r"><code>tail(dialect_data)</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["sex"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["occupation"],"name":[2],"type":["fctr"],"align":["left"]},{"label":["age"],"name":[3],"type":["int"],"align":["right"]},{"label":["age_group"],"name":[4],"type":["fctr"],"align":["left"]},{"label":["town"],"name":[5],"type":["fctr"],"align":["left"]},{"label":["postcode_birth"],"name":[6],"type":["fctr"],"align":["left"]},{"label":["postcode_now"],"name":[7],"type":["fctr"],"align":["left"]},{"label":["bread"],"name":[8],"type":["fctr"],"align":["left"]},{"label":["furniture"],"name":[9],"type":["fctr"],"align":["left"]},{"label":["clothing"],"name":[10],"type":["fctr"],"align":["left"]},{"label":["evening_meal"],"name":[11],"type":["fctr"],"align":["left"]},{"label":["group"],"name":[12],"type":["fctr"],"align":["left"]},{"label":["foot_strut"],"name":[13],"type":["fctr"],"align":["left"]},{"label":["for_more"],"name":[14],"type":["fctr"],"align":["left"]},{"label":["one_gone"],"name":[15],"type":["fctr"],"align":["left"]},{"label":["book_spook"],"name":[16],"type":["fctr"],"align":["left"]},{"label":["fur_bear"],"name":[17],"type":["fctr"],"align":["left"]},{"label":["sauce_source"],"name":[18],"type":["fctr"],"align":["left"]},{"label":["pour_poor"],"name":[19],"type":["fctr"],"align":["left"]},{"label":["eight_ate"],"name":[20],"type":["fctr"],"align":["left"]},{"label":["bangor_banger"],"name":[21],"type":["fctr"],"align":["left"]},{"label":["mute_moot"],"name":[22],"type":["fctr"],"align":["left"]},{"label":["spa_spar"],"name":[23],"type":["fctr"],"align":["left"]},{"label":["thin_fin"],"name":[24],"type":["fctr"],"align":["left"]},{"label":["give_it_me"],"name":[25],"type":["fctr"],"align":["left"]},{"label":["I_done_it"],"name":[26],"type":["fctr"],"align":["left"]},{"label":["it_was"],"name":[27],"type":["fctr"],"align":["left"]},{"label":["you_was"],"name":[28],"type":["fctr"],"align":["left"]},{"label":["beaches_was"],"name":[29],"type":["fctr"],"align":["left"]},{"label":["I_werent"],"name":[30],"type":["lgl"],"align":["right"]},{"label":["they_was"],"name":[31],"type":["fctr"],"align":["left"]},{"label":["we_was"],"name":[32],"type":["fctr"],"align":["left"]},{"label":["dress_what"],"name":[33],"type":["lgl"],"align":["right"]},{"label":["things_what"],"name":[34],"type":["fctr"],"align":["left"]}],"data":[{"1":"female","2":"hairdresser","3":"31","4":"young","5":"Germany. Catterick and york","6":"YO10","7":"YO8","8":"roll","9":"sofa","10":"trousers","11":"tea","12":"you lot","13":"don't rhyme","14":"rhyme","15":"rhyme","16":"don't rhyme","17":"don't rhyme","18":"rhyme","19":"same","20":"same","21":"different","22":"different","23":"same","24":"same","25":"c. I've heard some people use this form.","26":"c. I've heard some people use this form.","27":"b. I wouldn't use it, but people from my area do.","28":"c. I've heard some people use this form.","29":"c. I've heard some people use this form.","30":"NA","31":"b. I wouldn't use it, but people from my area do.","32":"c. I've heard some people use this form.","33":"NA","34":"a. I'd say this myself.","_rn_":"6591"},{"1":"male","2":"IT Manager","3":"45","4":"middle","5":"Newton Aycliffe, County Durham.","6":"DL5","7":"YO8","8":"bun","9":"sofa","10":"trousers","11":"tea","12":"you","13":"rhyme","14":"rhyme","15":"rhyme","16":"don't rhyme","17":"don't rhyme","18":"rhyme","19":"different","20":"same","21":"different","22":"different","23":"same","24":"different","25":"d. A speaker of English might say this, but I haven't really heard it.","26":"e. No native speaker of English would say this.","27":"b. I wouldn't use it, but people from my area do.","28":"b. I wouldn't use it, but people from my area do.","29":"e. No native speaker of English would say this.","30":"NA","31":"b. I wouldn't use it, but people from my area do.","32":"b. I wouldn't use it, but people from my area do.","33":"NA","34":"b. I wouldn't use it, but people from my area do.","_rn_":"6592"},{"1":"male","2":"Engineer","3":"45","4":"middle","5":"Sheffield","6":"S31","7":"YO8","8":"bun","9":"sofa","10":"trousers","11":"tea","12":"you lot","13":"rhyme","14":"rhyme","15":"rhyme","16":"don't rhyme","17":"don't rhyme","18":"rhyme","19":"different","20":"different","21":"different","22":"same","23":"same","24":"same","25":"a. I'd say this myself.","26":"b. I wouldn't use it, but people from my area do.","27":"c. I've heard some people use this form.","28":"a. I'd say this myself.","29":"a. I'd say this myself.","30":"NA","31":"a. I'd say this myself.","32":"a. I'd say this myself.","33":"NA","34":"a. I'd say this myself.","_rn_":"6593"},{"1":"male","2":"Radio technician","3":"30","4":"young","5":"South Molton (Devon)","6":"EX36","7":"BH9","8":"roll","9":"sofa","10":"trousers","11":"tea if light meal; dinner if big meal","12":"you guys","13":"don't rhyme","14":"rhyme","15":"don't rhyme","16":"don't rhyme","17":"don't rhyme","18":"rhyme","19":"same","20":"same","21":"same","22":"same","23":"same","24":"different","25":"a. I'd say this myself.","26":"d. A speaker of English might say this, but I haven't really heard it.","27":"c. I've heard some people use this form.","28":"c. I've heard some people use this form.","29":"d. A speaker of English might say this, but I haven't really heard it.","30":"NA","31":"c. I've heard some people use this form.","32":"c. I've heard some people use this form.","33":"NA","34":"c. I've heard some people use this form.","_rn_":"6594"},{"1":"female","2":"Student","3":"19","4":"young","5":"Ashbourne, Derbyshire","6":"DE6 1JF","7":"DE6","8":"bun, cob, roll","9":"sofa","10":"trousers","11":"tea, Dinner for a restaurant","12":"you guys","13":"don't rhyme","14":"rhyme","15":"rhyme","16":"don't rhyme","17":"don't rhyme","18":"rhyme","19":"same","20":"same","21":"same","22":"different","23":"same","24":"different","25":"b. I wouldn't use it, but people from my area do.","26":"a. I'd say this myself.","27":"e. No native speaker of English would say this.","28":"b. I wouldn't use it, but people from my area do.","29":"d. A speaker of English might say this, but I haven't really heard it.","30":"NA","31":"b. I wouldn't use it, but people from my area do.","32":"d. A speaker of English might say this, but I haven't really heard it.","33":"NA","34":"b. I wouldn't use it, but people from my area do.","_rn_":"6595"},{"1":"female","2":"Student","3":"18","4":"young","5":"Sale, Cheshire","6":"M33","7":"CW11","8":"barm","9":"settee","10":"trousers","11":"","12":"you","13":"don't rhyme","14":"rhyme","15":"rhyme","16":"don't rhyme","17":"don't rhyme","18":"rhyme","19":"same","20":"same","21":"different","22":"different","23":"same","24":"different","25":"b. I wouldn't use it, but people from my area do.","26":"b. I wouldn't use it, but people from my area do.","27":"c. I've heard some people use this form.","28":"c. I've heard some people use this form.","29":"e. No native speaker of English would say this.","30":"NA","31":"b. I wouldn't use it, but people from my area do.","32":"b. I wouldn't use it, but people from my area do.","33":"NA","34":"e. No native speaker of English would say this.","_rn_":"6596"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<p>What are the names of the columns?</p>
+<pre class="r"><code>colnames(dialect_data)</code></pre>
+<pre><code>##  [1] &quot;sex&quot;            &quot;occupation&quot;     &quot;age&quot;            &quot;age_group&quot;     
+##  [5] &quot;town&quot;           &quot;postcode_birth&quot; &quot;postcode_now&quot;   &quot;bread&quot;         
+##  [9] &quot;furniture&quot;      &quot;clothing&quot;       &quot;evening_meal&quot;   &quot;group&quot;         
+## [13] &quot;foot_strut&quot;     &quot;for_more&quot;       &quot;one_gone&quot;       &quot;book_spook&quot;    
+## [17] &quot;fur_bear&quot;       &quot;sauce_source&quot;   &quot;pour_poor&quot;      &quot;eight_ate&quot;     
+## [21] &quot;bangor_banger&quot;  &quot;mute_moot&quot;      &quot;spa_spar&quot;       &quot;thin_fin&quot;      
+## [25] &quot;give_it_me&quot;     &quot;I_done_it&quot;      &quot;it_was&quot;         &quot;you_was&quot;       
+## [29] &quot;beaches_was&quot;    &quot;I_werent&quot;       &quot;they_was&quot;       &quot;we_was&quot;        
+## [33] &quot;dress_what&quot;     &quot;things_what&quot;</code></pre>
+</div>
+</div>
+<div id="data-summaries-making-tables" class="section level1">
+<h1>Data summaries: Making tables</h1>
+<p>Let’s say we want to see how many of our respondents have said that “foot” and “strut” rhyme, and how many say they don’t. We can do this easily using the table function in R. Note that we use the dollar sign $ again to denote the specific <code>foot_strut</code> column within the <code>dialect_data</code> dataset.</p>
+<pre class="r"><code>table(dialect_data$foot_strut)</code></pre>
+<pre><code>## 
+## don&#39;t rhyme       rhyme 
+##        3029        3567</code></pre>
+<p>This would be our dependent variable, but can we think of a possible independent variable we’d want to look at too? We can add this in simply by adding another instruction to the table. Let’s try this with speaker age group (categorical):</p>
+<pre class="r"><code>table(dialect_data$foot_strut, dialect_data$age_group)</code></pre>
+<pre><code>##              
+##               middle  old young
+##   don&#39;t rhyme    956  475  1598
+##   rhyme          990  593  1984</code></pre>
+<p>Note, we also have the specific speaker age (continuous), but that’s going to be difficult to visualise in a table, so we’ll leave that for now.</p>
+<p>Try this below for a different independent variable of your choice:</p>
+<pre class="r"><code>#your code here for your choice of independent variable</code></pre>
+<p>These numbers are not ideal in terms of presenting a result to our audience. We really want to be showing them the percentage of speakers who say rhyme and don’t rhyme, rather than the raw numbers. How can we do this?</p>
+<p>There are always numerous ways to do things in R. Sometimes, I’ll use the functions that come installed with basic R, other times I’ll be showing you additional packages that we can install that will make our lives easier.</p>
+<div id="basic-proportional-tables" class="section level3">
+<h3>Basic proportional tables</h3>
+<p>The first step to making a proportional table would be saving our current table as a variable in R.</p>
+<pre class="r"><code>foot_strut.tab = table(dialect_data$foot_strut, dialect_data$age_group)</code></pre>
+<p>Once you run this code, you should be able to see your new <code>foot_strut.tab</code> in the right hand corner <em>environment</em> window. I like to call it R’s brain. You have now saved <code>foot_strut.tab</code> in R’s brain and you can call it up whenever you want during the session. Let’s try it now by running the code below:</p>
+<pre class="r"><code>foot_strut.tab </code></pre>
+<pre><code>##              
+##               middle  old young
+##   don&#39;t rhyme    956  475  1598
+##   rhyme          990  593  1984</code></pre>
+<p>Note that I have given it a <code>.tab</code> at the end of its name. Once you get going, you’ll have potentially hundreds of things stored in R’s brain. So by giving them names with <code>.tab</code> on the end for tables or <code>.plot</code> on the end for plots, you’ll make life a bit easier for yourself in the long run.</p>
+<p>OK, so how do we make a percentage table, or a proportional table? We can do this with the <code>prop.table</code> function:</p>
+<pre class="r"><code>prop.table(foot_strut.tab, 2) </code></pre>
+<pre><code>##              
+##                  middle       old     young
+##   don&#39;t rhyme 0.4912641 0.4447566 0.4461195
+##   rhyme       0.5087359 0.5552434 0.5538805</code></pre>
+<p>This gives us the breakdown in percentages. Is the <code>foot_strut</code> variable changing over time between old, middle and young people’s speech?</p>
+<p>Let’s save this in R’s brain:</p>
+<pre class="r"><code>foot_strut.prop.tab = prop.table(foot_strut.tab, 2) </code></pre>
+<p>What does the <code>,2</code> bit mean at the end of the call though? This tells R to divide the proportions using the <em>second</em> variable of the table call, not the first. That is, we want to divide each value by the total of the <em>young, middle and old</em> columns, and not by the <em>don’t rhyme/rhyme rows</em>. We always want to divide by the independent variable. Why is this?</p>
+<p>Take a look at what happens when you try to divide by the first variable of the table call:</p>
+<pre class="r"><code># WRONG WAY AROUND
+prop.table(foot_strut.tab, 1) </code></pre>
+<pre><code>##              
+##                  middle       old     young
+##   don&#39;t rhyme 0.3156157 0.1568174 0.5275669
+##   rhyme       0.2775442 0.1662461 0.5562097</code></pre>
+<p>What is wrong with this?</p>
+<p>This is a very important thing to remember. We want the independent variable column to be the one that adds up to 100%, to ensure that in cases like these where we have many more participants in one category (young) than another (old) our proportions work our correctly.</p>
+<p>Note that, if our original table call had put <code>age_group</code> before <code>foot_strut</code>, the number would actually be <code>1</code>. It’s whatever position the independent variable is in.</p>
+<p>Ideally, the table you’ll present to your reader will have percentages in, but also a row below with the totals for each column.</p>
+</div>
+<div id="making-summary-tables-with-dplyr" class="section level2">
+<h2>Making summary tables with <code>dplyr</code></h2>
+<p><code>dplyr</code> is an R package which makes it very easy to look at summaries of data. Even though some people consider it more advanced, I think it’s a good idea to introduce beginners to it from the start. We’re going to try to do the same using this package.</p>
+<p>We already loaded it in at the start, but if you hadn’t have done that by now, the following code would not work. Always make sure you’ve run the line <code>library(dplyr)</code> at the beginning of each session to run this kind of code.</p>
+<p><code>dplyr</code> makes regular use of this set of symbols, which it calls the <em>pipe</em>: <code>%&gt;%</code>. This signifies to R that you haven’t finished with your code yet, and it needs to look to the next line to figure out what’s happening next. It’s <em>piping</em> the code to the next line. If you get an error message about the pipe <code>%&gt;%</code>, it probably means you haven’t loaded in <code>dplyr</code>.</p>
+<pre class="r"><code>dialect_data %&gt;%
+  group_by(age_group) %&gt;% # the independent variable
+  count(foot_strut) %&gt;% # the dependent variable
+  mutate(prop = prop.table(n))</code></pre>
+<pre><code>## Warning: package &#39;bindrcpp&#39; was built under R version 3.3.2</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["age_group"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["foot_strut"],"name":[2],"type":["fctr"],"align":["left"]},{"label":["n"],"name":[3],"type":["int"],"align":["right"]},{"label":["prop"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"middle","2":"don't rhyme","3":"956","4":"0.4912641"},{"1":"middle","2":"rhyme","3":"990","4":"0.5087359"},{"1":"old","2":"don't rhyme","3":"475","4":"0.4447566"},{"1":"old","2":"rhyme","3":"593","4":"0.5552434"},{"1":"young","2":"don't rhyme","3":"1598","4":"0.4461195"},{"1":"young","2":"rhyme","3":"1984","4":"0.5538805"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<p>Can you see how this package allows us to do the same thing as we did before, but a bit quicker?</p>
+<p>Create a chunk below and try creating some other summaries in <code>dplyr</code>. First, let’s create a summary for another independent variable of <code>foot_strut</code>:</p>
+<pre class="r"><code># here you can look at another independent variable&#39;s affect on foot_strut</code></pre>
+<p>Now let’s try a different independent <em>and</em> dependent variable. Insert a new chunk below:</p>
+<p>We’ve seen in this section that there’s always (at least!) a couple of ways to do things in R. In the next section we’ll look at making some plots, starting off with the R base graphics, and moving on to some more advanced packages which look more difficult at the beginning, but actually make life easier in the end, and produce much nicer looking plots.</p>
+</div>
+</div>
+<div id="plots" class="section level1">
+<h1>Plots</h1>
+<div id="base-r-graphics" class="section level2">
+<h2>Base R graphics</h2>
+<p>Let’s try making a plot of the <code>foot_strut</code> variable. We can use Base R’s <code>barplot</code> function to do this, and it’s useful that we’ve already made tables of the frequencies and proportions.</p>
+<p>We could just plot the raw frequencies, but this isn’t very helpful:</p>
+<pre class="r"><code>barplot(foot_strut.tab)</code></pre>
+<p><img src="HSS8005_session2_notebook_2018-19_files/figure-html/unnamed-chunk-18-1.png" width="672" /> This graph looks quite rubbish. It’s unclear what the trend is, as our sample is so biased towards young people. Also, it’s annoying for us that R automatically plots factor levels in alphabetical order, because it puts the middle aged group at the front. We’ll come to that in a bit.</p>
+<p>Firstly, can you try plotting the proportions instead of the frequencies? Try it in the chunk below, and shout me if you get stuck.</p>
+<pre class="r"><code>#create a barplot with the proportions of foot_strut instead of raw numbers</code></pre>
+<p>Can we get it so that it goes in order of age group? Let’s take a look at the factor levels of <code>age_group</code> using the levels function:</p>
+<pre class="r"><code>levels(dialect_data$age_group)</code></pre>
+<pre><code>## [1] &quot;middle&quot; &quot;old&quot;    &quot;young&quot;</code></pre>
+<p>Can you see that they are in alphabetical order? We can change the order of these levels. Again, there are many ways to do this. We’ll be looking at how you do it in 1) base R and 2) <code>dplyr</code>. Firstly, we’ll look at how you do it in base R. In the chunk below, I’ve actually created a new variable called <code>age_group_ordered</code>. You don’t have to do this usually, you can just re-specify the order of <code>age_group</code>. However, I want to keep the old order to show you how to reorder in <code>dplyr</code> too. Saying that, sometimes, if you’re not sure of what you’re doing, it’s better to avoid writing over the old.</p>
+<p>Let’s reorder the factor levels:</p>
+<pre class="r"><code># reordering
+dialect_data$age_group_ordered = factor(dialect_data$age_group,levels(dialect_data$age_group)[c(3, 1, 2)])
+
+#having a look at new order
+levels(dialect_data$age_group_ordered)</code></pre>
+<pre><code>## [1] &quot;young&quot;  &quot;middle&quot; &quot;old&quot;</code></pre>
+<p>Try the plot again with the new order by creating a chunk below:</p>
+</div>
+<div id="plots-in-ggplot2" class="section level2">
+<h2>Plots in <code>ggplot2</code></h2>
+<p>Not only do <code>ggplot2</code> plots look prettier and are easier to customise, we can also combine them with <code>dplyr</code> code to make data changes efficiently. Both packages are written by Hadley Wickham, whose R <a href="http://adv-r.had.co.nz/Style.html">style guide</a> we discussed earlier in this course.</p>
+<p>The package to make ggplots is called <code>ggplot2</code>. Remember the <code>2</code> when you load in the package, otherwise it won’t work. We already loaded it in before, but you’ll need to do that each time you start R by calling <code>library(ggplot2)</code>.</p>
+<p>The plot call initially looks a lot more complicated. But <code>gg</code> stands for <em>grammar of graphics</em>, and as you get used to using it, you’ll realise it’s much easier to switch between different kinds of graphs, and customise the look of them.</p>
+<p>Let’s try a barplot for foot_strut and age_group in <code>ggplot2</code>:</p>
+<pre class="r"><code>ggplot(dialect_data, aes(age_group_ordered, fill = foot_strut)) + 
+geom_bar()</code></pre>
+<p><img src="HSS8005_session2_notebook_2018-19_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<p>This has given us the frequencies. Again, it’d be better to see the percentages, rather than the raw numbers. We can do this easily by adding <code>position=&quot;fill&quot;</code> to the <code>geom_bar()</code> bit:</p>
+<pre class="r"><code>ggplot(dialect_data, aes(age_group_ordered, fill = foot_strut)) +
+geom_bar(position=&quot;fill&quot;)</code></pre>
+<p><img src="HSS8005_session2_notebook_2018-19_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+<p>The beauty of ggplot is that you can just stack up command after command using the <code>+</code> symbol to customise your plot.</p>
+<p>I can change the x axis title:</p>
+<pre class="r"><code>ggplot(dialect_data, aes(age_group_ordered, fill = foot_strut)) +
+geom_bar(position=&quot;fill&quot;) +
+xlab(&quot;age group&quot;)</code></pre>
+<p><img src="HSS8005_session2_notebook_2018-19_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+<p>I can move the legend to the bottom:</p>
+<pre class="r"><code>ggplot(dialect_data, aes(age_group_ordered, fill = foot_strut)) +
+geom_bar(position=&quot;fill&quot;) +
+xlab(&quot;age group&quot;) +
+theme(legend.position = &quot;bottom&quot;)</code></pre>
+<p><img src="HSS8005_session2_notebook_2018-19_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
+<p>I can change the colours:</p>
+<pre class="r"><code>ggplot(dialect_data, aes(age_group_ordered, fill = foot_strut)) +
+geom_bar(position=&quot;fill&quot;) +
+xlab(&quot;age group&quot;) +
+theme(legend.position = &quot;bottom&quot;) +
+scale_fill_manual(values = c(&quot;red&quot;, &quot;yellow&quot;))</code></pre>
+<p><img src="HSS8005_session2_notebook_2018-19_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+<p>Try changing the colours yourself in the chunk below:</p>
+<pre class="r"><code>#my ggplot with new colours</code></pre>
+<p>In fact, if you’re bad at choosing which colours go together, there are many in built colour palettes that you can use. A list can be found <a href="https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/colorPaletteCheatsheet.pdf">here</a> alongside the colour names that R accepts.</p>
+<p>Let’s try a palette. I’m going to try Set1 from the above link. Try messing around with it to get a colour scheme you like.</p>
+<pre class="r"><code>ggplot(dialect_data, aes(age_group_ordered, fill = foot_strut)) +
+  geom_bar(position=&quot;fill&quot;) +
+  scale_fill_brewer(palette=&quot;Set1&quot;) </code></pre>
+<p><img src="HSS8005_session2_notebook_2018-19_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+<p>Try creating a plot from scratch using a different dependent variable. Our phonological variables are pretty orderly- they only have two factor levels, or variants. How do things start to look with some of our syntactic variables, or lexical? Try to make three plots: one new phonological, one new syntactic and one new lexical.</p>
+<p>Once you’ve done that, you could look at other things that you can play around with in the settings of <code>ggplot2</code>. Here you can find the <a href="https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf">ggplot cheat sheet</a>.</p>
+<p>Next week, we’ll be looking at how to automatically save figures to pdf.</p>
+</div>
+</div>
+<div id="challenge---stepping-away-from-the-notebook" class="section level1">
+<h1>Challenge - stepping away from the Notebook</h1>
+<p>Open up a blank RStudio script by going to <strong>File &gt; New File &gt; R Script…</strong>. Save it as <em>HSS8005_session1_script</em> in the same folder as your other files.</p>
+<p>Try retyping (or copy and pasting) all of the commands you’ve run above and getting them to work in your own document, instead of relying on this workbook. Execute the command by clicking <strong>Run</strong> or typying Command + Enter.</p>
+</div>
+<div id="r-markdown" class="section level1">
+<h1>R markdown</h1>
+<p>You can convert this entire notebook into a pdf, html or Word document by going to the little triangle drop-down menu next to <strong>Preview</strong> and choosing one of the <strong>Knit to…</strong> options. This is how I’d like you to submit your assessment for class, but it is also handy for writing up your quantitative work, as your R code is embedded in your document.</p>
+<p>As you start to publish your work, you won’t want the R code itself to show, but just the output. This is easy to do by setting the option <code>echo = FALSE</code>. Try previewing the document, or knitting the document to pdf, html or word, and compare the chunk below with earlier ones:</p>
+<pre><code>## [1] 4</code></pre>
+<p>Can you see this stops it from replicating the code?</p>
+<p>Markdown is a very simple language. You use <em>stars for italics</em>, and you use <strong>double stars for bold</strong>. Hashes indicate new sections and the level of that section (i.e. two hashes are a subsection). Check out the R markdown cheatsheet <a href="https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf">here</a>. You can see I just made a clickable link in the previous sentence. Have a look at what that looks like in your knitted output. For your next task, have a play around with different options in R markdown.</p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
