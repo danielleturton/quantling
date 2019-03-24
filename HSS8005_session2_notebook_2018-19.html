@@ -72,9 +72,7 @@ h6 {
 </style>
 
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -93,8 +91,14 @@ img {
 .tabbed-pane {
   padding-top: 12px;
 }
+.html-widget {
+  margin-bottom: 20px;
+}
 button.code-folding-btn:focus {
   outline: none;
+}
+summary {
+  display: list-item;
 }
 </style>
 
@@ -110,7 +114,6 @@ body {
   padding-top: 56px;
   margin-top: -56px;
 }
-
 .section h2 {
   padding-top: 56px;
   margin-top: -56px;
@@ -130,6 +133,43 @@ body {
 .section h6 {
   padding-top: 56px;
   margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
@@ -151,19 +191,85 @@ $(document).ready(function () {
 });
 </script>
 
-
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
 });
 </script>
 
 <!-- code folding -->
 
 
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -190,7 +296,7 @@ $(document).ready(function () {
   <a href="HSS8005_session2_notebook_2018-19.nb.html">Session 2</a>
 </li>
 <li>
-  <a href="tbc.html">Session 3</a>
+  <a href="HSS8005_session3_notebook_2018-19.nb.html">Session 3</a>
 </li>
 <li>
   <a href="tbc.html">Session 4</a>
@@ -208,7 +314,7 @@ $(document).ready(function () {
 
 
 <h1 class="title toc-ignore">HSS8005: Quantitative Linguistics - Session 2 notebook</h1>
-<h4 class="author"><em>Semester 2 2018-19, Danielle Turton</em></h4>
+<h4 class="author">Semester 2 2018-19, Danielle Turton</h4>
 
 </div>
 
@@ -255,7 +361,6 @@ $(document).ready(function () {
 <p>The first thing we want to do, as usual, is load in the relevant packages for today. The following code should do the job:</p>
 <pre class="r"><code>## LOAD PACKAGES ####
 library(dplyr) # this is a package that makes handling data easier</code></pre>
-<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 3.3.2</code></pre>
 <pre><code>## 
 ## Attaching package: &#39;dplyr&#39;</code></pre>
 <pre><code>## The following objects are masked from &#39;package:stats&#39;:
@@ -265,7 +370,6 @@ library(dplyr) # this is a package that makes handling data easier</code></pre>
 ## 
 ##     intersect, setdiff, setequal, union</code></pre>
 <pre class="r"><code>library(ggplot2) # this is a package that makes nice graphs</code></pre>
-<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 3.3.2</code></pre>
 <p>You might see some messages, but that is fine.</p>
 <p>Again, if this doesn’t work, you may need to install the packages. You only have to install a package once, but you have load a package in (like we just did above) every time you open R. To install a package for the first time, you can go to ** tools &gt; install packages… &gt;** and then search for the name of the package. You can also run it directly through the console by inputting <code>install.packages(&quot;dplyr&quot;)</code>.</p>
 </div>
@@ -365,7 +469,6 @@ prop.table(foot_strut.tab, 1) </code></pre>
   group_by(age_group) %&gt;% # the independent variable
   count(foot_strut) %&gt;% # the dependent variable
   mutate(prop = prop.table(n))</code></pre>
-<pre><code>## Warning: package &#39;bindrcpp&#39; was built under R version 3.3.2</code></pre>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":["age_group"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["foot_strut"],"name":[2],"type":["fctr"],"align":["left"]},{"label":["n"],"name":[3],"type":["int"],"align":["right"]},{"label":["prop"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"middle","2":"don't rhyme","3":"956","4":"0.4912641"},{"1":"middle","2":"rhyme","3":"990","4":"0.5087359"},{"1":"old","2":"don't rhyme","3":"475","4":"0.4447566"},{"1":"old","2":"rhyme","3":"593","4":"0.5552434"},{"1":"young","2":"don't rhyme","3":"1598","4":"0.4461195"},{"1":"young","2":"rhyme","3":"1984","4":"0.5538805"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
@@ -407,8 +510,7 @@ levels(dialect_data$age_group_ordered)</code></pre>
 <p>The package to make ggplots is called <code>ggplot2</code>. Remember the <code>2</code> when you load in the package, otherwise it won’t work. We already loaded it in before, but you’ll need to do that each time you start R by calling <code>library(ggplot2)</code>.</p>
 <p>The plot call initially looks a lot more complicated. But <code>gg</code> stands for <em>grammar of graphics</em>, and as you get used to using it, you’ll realise it’s much easier to switch between different kinds of graphs, and customise the look of them.</p>
 <p>Let’s try a barplot for foot_strut and age_group in <code>ggplot2</code>:</p>
-<pre class="r"><code>ggplot(dialect_data, aes(age_group_ordered, fill = foot_strut)) + 
-geom_bar()</code></pre>
+<p><code>r   ggplot(dialect_data, aes(age_group_ordered, fill = foot_strut)) +    geom_bar()</code></p>
 <p><img src="HSS8005_session2_notebook_2018-19_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
 <p>This has given us the frequencies. Again, it’d be better to see the percentages, rather than the raw numbers. We can do this easily by adding <code>position=&quot;fill&quot;</code> to the <code>geom_bar()</code> bit:</p>
 <pre class="r"><code>ggplot(dialect_data, aes(age_group_ordered, fill = foot_strut)) +
