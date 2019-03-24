@@ -13,7 +13,6 @@ output:
     toc_float: yes
 ---
   
-
 ---
 # Last week
 Last week, we looked at categorical variables from the dialect dataset.  We learned how to look at data summaries, and make graphs in both Base R and `ggplot2`.
@@ -27,8 +26,9 @@ Today I would like you to try running the commands in your own script, rather th
 If you would really prefer to use the R notebook, you can find it [here](HERE).
 
 ## Packages
-As usual, the first thing we want to do before we start is load in the relevant packages for today. 
-```{r}
+As usual, the first thing we want to do before we start is load in the relevant packages for today.
+
+```{r, echo = TRUE}
 ## LOAD PACKAGES ####
 library(dplyr) # this is a package that makes handling data easier
 library(ggplot2) # this is a package that makes nice graphs
