@@ -10,6 +10,6 @@ navbar:
     - text: "Session 2"
       href: HSS8005_session2_notebook_2018-19.nb.html
     - text: "Session 3"
-      href: HSS8005_session3_notebook_2018-19.nb.html
+      href: HSS8005_session3_notebook_2018-19.html
     - text: "Session 4"
       href: tbc.html
