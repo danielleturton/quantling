@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>HSS8005: Quantitative Linguistics - Session 3</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Introduction to Quantitative Linguistics</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Overview</a>
+</li>
+<li>
+  <a href="HSS8005_session1_notebook_2018-19.nb.html">Session 1</a>
+</li>
+<li>
+  <a href="HSS8005_session2_notebook_2018-19.nb.html">Session 2</a>
+</li>
+<li>
+  <a href="tbc.html">Session 3</a>
+</li>
+<li>
+  <a href="tbc.html">Session 4</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">HSS8005: Quantitative Linguistics - Session 3</h1>
+
+</div>
+
+
+<hr />
+<div id="last-week" class="section level1">
+<h1>Last week</h1>
+<p>Last week, we looked at categorical variables from the dialect dataset. We learned how to look at data summaries, and make graphs in both Base R and <code>ggplot2</code>.</p>
+</div>
+<div id="today" class="section level1">
+<h1>Today</h1>
+<p>Today we will look at a continuous linguistic variable, reaction time. The following (made up) dataset contains reaction time data from a word recognition task. Bilingual and monolingual speakers were given a task where they have to decide if a word is part of their language or not. The reaction time measures how long it took them to decide. Download the dataset for today by right clicking <a href="HERE">here</a> and selecting <em>save link/target as</em>.</p>
+</div>
+<div id="notebook-vs.script" class="section level1">
+<h1>Notebook vs. script</h1>
+<p>Today I would like you to try running the commands in your own script, rather than using the R notebook.</p>
+<p>If you would really prefer to use the R notebook, you can find it <a href="HERE">here</a>.</p>
+<div id="packages" class="section level2">
+<h2>Packages</h2>
+<p>As usual, the first thing we want to do before we start is load in the relevant packages for today.</p>
+<pre class="r"><code>## LOAD PACKAGES ####
+library(dplyr) # this is a package that makes handling data easier</code></pre>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<pre class="r"><code>library(ggplot2) # this is a package that makes nice graphs</code></pre>
+<p>Again, you might see some messages, but that is fine.</p>
+<p>Remember, if this doesn’t work (probably only if you’re doing this on your own computer), you may need to install the packages. You only have to install a package once, but you have load a package in (like we just did above) every time you open R. To install a package for the first time, you can go to ** tools &gt; install packages… &gt;** and then search for the name of the package. You can also run it directly through the console by inputting <code>install.packages(&quot;dplyr&quot;)</code>.</p>
+</div>
+<div id="reaction-time-data" class="section level2">
+<h2>Reaction time data</h2>
+<p>The data itself needs to be in the same folder R Notebook document. That means we can easily load it in without having to specify the full path (i.e. location) of the document. Try running the following code and see if it works:</p>
+<pre class="r"><code>## LOAD IN DATA ####
+rt_data = read.delim(&quot;HSS8005_reactiondata.txt&quot;)</code></pre>
+<p>This probably won’t work just yet. That’s because, if you’re not using a notebook or an R project (next session), we need to specify the exact location i.e. path of the data. You can find this out in various ways (try Googling ‘how to find a file path’), but I usually navigate to the file in its directory and right click to select <em>Properties</em> (Windows) or <em>Get Info</em> (Mac).</p>
+<p>The other way to do it is to <em>set the working directory</em> for the session to the folder your script is saved in. God to <strong>Session</strong> and then <strong>Set Working Directory &gt; To Source File Location</strong>. Try editing the path, or changing the working directory and then run your code to load in the dataset.</p>
+<p>Do you notice anything different about the call function here? This dataset is a <code>.txt</code> file, not a <code>.csv</code> file. Do you know the difference between these types of file? It doesn’t matter which one yours is, but you need to make sure the call is <code>read.delim()</code> for <code>.txt</code> files and <code>read.csv()</code> for <code>.csv</code> files</p>
+<p>We have called our dataset <code>rt_data</code> (which stands for <em>reaction time</em> data) and we should now be able to see it in the right corner panel under <strong>Environment</strong> as one of the things we have loaded in.</p>
+<p>This data is kindly donated by Page Piccinni, who has a fantastic (if a little advanced) R course online here: (<a href="https://pagepiccinini.com/r-course/" class="uri">https://pagepiccinini.com/r-course/</a>)</p>
+<p>Let’s look at our data to get a feel for what is in there:</p>
+<pre class="r"><code>dim(rt_data)</code></pre>
+<pre><code>## [1] 400   3</code></pre>
+<p>How many rows and columns does the data have?</p>
+<p>Let’s have a look at the top six rows:</p>
+<pre class="r"><code>head(rt_data)</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["group"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["type"],"name":[2],"type":["fctr"],"align":["left"]},{"label":["rt"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"monolingual","2":"NA","3":"910.7722","_rn_":"1"},{"1":"monolingual","2":"NA","3":"887.0629","_rn_":"2"},{"1":"monolingual","2":"NA","3":"886.0760","_rn_":"3"},{"1":"monolingual","2":"NA","3":"906.1512","_rn_":"4"},{"1":"monolingual","2":"NA","3":"897.7662","_rn_":"5"},{"1":"monolingual","2":"NA","3":"896.8191","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<p>Is there some missing data here? Or should we expect to find this?</p>
+<p>How about the bottom six?</p>
+<pre class="r"><code>tail(rt_data)</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["group"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["type"],"name":[2],"type":["fctr"],"align":["left"]},{"label":["rt"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"bilingual","2":"low","3":"1072.872","_rn_":"395"},{"1":"bilingual","2":"low","3":"1097.724","_rn_":"396"},{"1":"bilingual","2":"low","3":"1096.975","_rn_":"397"},{"1":"bilingual","2":"low","3":"1106.936","_rn_":"398"},{"1":"bilingual","2":"low","3":"1103.277","_rn_":"399"},{"1":"bilingual","2":"low","3":"1105.462","_rn_":"400"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<p>What are the names of the columns?</p>
+<pre class="r"><code>colnames(rt_data)</code></pre>
+<pre><code>## [1] &quot;group&quot; &quot;type&quot;  &quot;rt&quot;</code></pre>
+<p>Which is our dependent variable, out of these three?</p>
+</div>
+<div id="looking-more-closely-at-data" class="section level2">
+<h2>Looking more closely at data</h2>
+<p>Let’s use the <code>levels()</code> function from last week to take a closer look at some of the columns.</p>
+<pre class="r"><code># Look at factor levels for some columns
+levels(rt_data$group)</code></pre>
+<pre><code>## [1] &quot;bilingual&quot;   &quot;monolingual&quot;</code></pre>
+<pre class="r"><code>levels(rt_data$type)</code></pre>
+<pre><code>## [1] &quot;high&quot; &quot;low&quot;</code></pre>
+<p>So it looks like the <code>group</code> factor has two levels and so does the <code>type</code> factor. Consider what these two factors represent in the dataset. Why did it look like there was missing data when we read in the <code>head</code> command before?</p>
+<p>We can also see how many tokens there are of each by looking at a table of what’s going on. Let’s have a look at <code>group</code>:</p>
+<pre class="r"><code>table(rt_data$group)</code></pre>
+<pre><code>## 
+##   bilingual monolingual 
+##         200         200</code></pre>
+<p>And type:</p>
+<pre class="r"><code>table(rt_data$type)</code></pre>
+<pre><code>## 
+## high  low 
+##  100  100</code></pre>
+<p>Why are the numbers not the same? What is <code>type</code>?</p>
+<p>Anyway, our dependent variable here is <code>rt</code> or <em>reaction time</em>. Can we look at the factor levels of that?</p>
+<pre class="r"><code>levels(rt_data$rt)</code></pre>
+<pre><code>## NULL</code></pre>
+<p>What does this mean? Why is it saying this?</p>
+<p>Let’s try something else:</p>
+<pre class="r"><code>summary(rt_data$rt)</code></pre>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   874.7   898.7   922.3   961.8  1001.0  1138.0</code></pre>
+<p>OK, so it looks like we have reaction time data, which is our continuous dependent variable, and we can look at this across two potential independent variables. <code>group</code> tells us if someone is bilingual or monolingual, and <code>type</code> gives us extra details about the bilinguals, on their profiency in their second language.</p>
+</div>
+</div>
+<div id="plots" class="section level1">
+<h1>Plots</h1>
+<p>We’ve already learnt how to make barplots. However, these are for when we have a categorical dependent variable. When we have a continuous dependent variable, and categorical independent variables, the best option is usually a boxplot.</p>
+<p>We can make boxplots very quickly and easily in Base R. We have the dependent variable first, then the <code>~</code> tilde symbol, then the independent variable we’re interested in. Try running this for the reaction time across the <code>type</code> variable:</p>
+<pre class="r"><code>boxplot(rt_data$rt ~ rt_data$type)</code></pre>
+<p><img src="HSS8005_session3_notebook_2018-19_files/figure-html/unnamed-chunk-12-1.png" width="672" /> What does this graph show us?</p>
+<p>Try it yourself for the group variable in the chunk below</p>
+<pre class="r"><code># plot and run the group variable in this chunk</code></pre>
+<p>What does the graph show you? What differences or similarities do you spot in the two plots?</p>
+<p>We also might want to view the general distribution of the reaction times, which we can do with a histogram:</p>
+<pre class="r"><code>hist(rt_data$rt)</code></pre>
+<p><img src="HSS8005_session3_notebook_2018-19_files/figure-html/unnamed-chunk-14-1.png" width="672" /> I wouldn’t always use histograms in my report, but they are very useful for showing you the distribution of the data. For example, I can immediately see here that the data is not normally distributed but, in fact, seems to have a bimodal distribution.</p>
+<div id="ggplots" class="section level3">
+<h3>ggplots</h3>
+<p>As we learnt last week, the syntax of ggplots is slightly more complicated, but it is more customisable, and looks much nicer. Let’s try a boxplot in <code>ggplot2</code> using the <code>geom_boxplot()</code> call:</p>
+<pre class="r"><code>ggplot(rt_data, aes(x = group, y = rt)) +
+  geom_boxplot()</code></pre>
+<p><img src="HSS8005_session3_notebook_2018-19_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p>Try making it more colourful by setting the factor levels of <code>group</code> to <code>colour</code></p>
+<pre class="r"><code>ggplot(rt_data, aes(x = group, y = rt, colour = group)) +
+  geom_boxplot()</code></pre>
+<p><img src="HSS8005_session3_notebook_2018-19_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<p>Or you can use <code>fill</code> to fill them in:</p>
+<pre class="r"><code>ggplot(rt_data, aes(x = group, y = rt, fill = group)) +
+  geom_boxplot()</code></pre>
+<p><img src="HSS8005_session3_notebook_2018-19_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<p>Remember our <a href="https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/colorPaletteCheatsheet.pdf">colour palettes</a> from last week? <img src="HSS8005_session3_notebook_2018-19_files/figure-html/unnamed-chunk-18-1.png" width="672" /> Note, if we’re setting the <code>fill</code> it needs to be <code>scale_fill_brewer</code> and if we’re setting the <code>colour</code> it needs to be <code>scale_colour_brewer</code>.</p>
+</div>
+<div id="saving-plots" class="section level3">
+<h3>Saving plots</h3>
+<p>There is no way to save plots separately from an R Notebook. If you are working with this as a notebook, instead, drag up the console from the bottom of the screen and run your code in there. Your plot should now show in the bottom right panel, and there is an option to export here. If you are copying and pasting from the website anyway, this instruction is not relevant for you.</p>
+<p>Try it yourself. Create your own plot of the <code>group</code> variable with different colours:</p>
+<p>Now try making a ggplot of the <code>type</code> variable:</p>
+<p>What do you notice about this graph? Are there any potential problems with it? Do we need to do anything with the data?</p>
+<p>What are <strong>NAs</strong>? NA stands for <em>not applicable</em> and means that there is data missing for that cell. In this case, it is part of the experimental design. in other cases, it might be an accident, and you may have to go back and check you don’t have missing data.</p>
+</div>
+</div>
+<div id="subsetting" class="section level1">
+<h1>Subsetting</h1>
+<p>As you may have realised above, we only have <code>type</code> data for the bilinguals, which makes sense given this experiment. Therefore, it doesn’t really make sense to look at the monolinguals when we are considering if someone is high or low profiency. This is where creating <strong>subsets</strong> comes in useful in R. We can create a subset for just the bilinguals.</p>
+<p>As usual, there are always a few ways to do things in R. We’ll start with the basic way, and move on to the more advanced way using <code>dplyr</code> later.</p>
+<div id="basic-subsetting" class="section level2">
+<h2>Basic subsetting</h2>
+<p>Here’s how we can create a bilingual subset in base R:</p>
+<pre class="r"><code>bl_data = subset(rt_data, group ==&quot;bilingual&quot;)</code></pre>
+<p>Here we come across the double equals sign. So far, we’ve been using <code>=</code> a single equals sign to assign things to variables. Remember I also said people often use <code>&lt;=</code> instead of <code>=</code> and it does the same thing. The double equals sign <code>==</code> means <em>must equal</em>, so R will only return those factor levels which have <em>bilingual</em> in them.</p>
+<p>Let’s use the usual functions to have a look at this new subsetted dataset:</p>
+<pre class="r"><code>dim(bl_data)</code></pre>
+<pre><code>## [1] 200   3</code></pre>
+<pre class="r"><code>head(bl_data)</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["group"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["type"],"name":[2],"type":["fctr"],"align":["left"]},{"label":["rt"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"bilingual","2":"high","3":"931.8969","_rn_":"201"},{"1":"bilingual","2":"high","3":"953.4020","_rn_":"202"},{"1":"bilingual","2":"high","3":"934.2860","_rn_":"203"},{"1":"bilingual","2":"high","3":"961.9091","_rn_":"204"},{"1":"bilingual","2":"high","3":"960.9247","_rn_":"205"},{"1":"bilingual","2":"high","3":"950.0086","_rn_":"206"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<pre class="r"><code>tail(bl_data)</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["group"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["type"],"name":[2],"type":["fctr"],"align":["left"]},{"label":["rt"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"bilingual","2":"low","3":"1072.872","_rn_":"395"},{"1":"bilingual","2":"low","3":"1097.724","_rn_":"396"},{"1":"bilingual","2":"low","3":"1096.975","_rn_":"397"},{"1":"bilingual","2":"low","3":"1106.936","_rn_":"398"},{"1":"bilingual","2":"low","3":"1103.277","_rn_":"399"},{"1":"bilingual","2":"low","3":"1105.462","_rn_":"400"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<p>Now we can try to make a plot of <code>type</code> without the monolinguals, by using our new subset:</p>
+<p><img src="HSS8005_session3_notebook_2018-19_files/figure-html/unnamed-chunk-23-1.png" width="672" /> What can we conclude from this graph?</p>
+<p>Once you’ve done that, you could look at other things that you can play around with in the settings of <code>ggplot2</code>. Here you can find the <a href="https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf">ggplot cheat sheet</a>.</p>
+<p>Here’s my final graph that I think looks nice: <img src="HSS8005_session3_notebook_2018-19_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+</div>
+<div id="subsetting-in-dplyr" class="section level2">
+<h2>Subsetting in <code>dplyr</code></h2>
+<p>We can also subset in <code>dplyr</code>. Not only can we do this in a similar way to above, by creating a new dataset, we can also <em>pipe</em> straight into a ggplot. Let’s look at both ways.</p>
+<p>The code below creates another subset of the bilingual data. This should be exactly the same as our old one. I’ve just given it a different name:</p>
+<pre class="r"><code>bl_data_dplyr = rt_data %&gt;%
+  filter(group == &quot;bilingual&quot;)</code></pre>
+<p>Again, we see the use of the double equals. We also see the <code>dplyr</code> verb <code>filter</code>. For a list of all possible <code>dplyr</code> verbs, see the following cheatsheet: (<a href="https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf" class="uri">https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf</a>)</p>
+<p>Let’s use the usual functions to have a look at this:</p>
+<pre class="r"><code>dim(bl_data_dplyr)</code></pre>
+<pre><code>## [1] 200   3</code></pre>
+<pre class="r"><code>head(bl_data_dplyr)</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["group"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["type"],"name":[2],"type":["fctr"],"align":["left"]},{"label":["rt"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"bilingual","2":"high","3":"931.8969","_rn_":"1"},{"1":"bilingual","2":"high","3":"953.4020","_rn_":"2"},{"1":"bilingual","2":"high","3":"934.2860","_rn_":"3"},{"1":"bilingual","2":"high","3":"961.9091","_rn_":"4"},{"1":"bilingual","2":"high","3":"960.9247","_rn_":"5"},{"1":"bilingual","2":"high","3":"950.0086","_rn_":"6"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<pre class="r"><code>tail(bl_data_dplyr)</code></pre>
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["group"],"name":[1],"type":["fctr"],"align":["left"]},{"label":["type"],"name":[2],"type":["fctr"],"align":["left"]},{"label":["rt"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"bilingual","2":"low","3":"1072.872","_rn_":"195"},{"1":"bilingual","2":"low","3":"1097.724","_rn_":"196"},{"1":"bilingual","2":"low","3":"1096.975","_rn_":"197"},{"1":"bilingual","2":"low","3":"1106.936","_rn_":"198"},{"1":"bilingual","2":"low","3":"1103.277","_rn_":"199"},{"1":"bilingual","2":"low","3":"1105.462","_rn_":"200"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+<p>It looks exactly the same, so we won’t make any new plots.</p>
+<p>** ADVANCED** You can use whichever of these two ways you prefer, but one benefit of the second way is that you can actually use similar syntax to pipe the subset directly into a ggplot. That way, you don’t even have to create a new subset.</p>
+<pre class="r"><code>rt_data %&gt;%
+  filter(group == &quot;bilingual&quot;) %&gt;%
+  ggplot(aes(x=type, y=rt, colour=type)) + geom_boxplot() </code></pre>
+<p><img src="HSS8005_session3_notebook_2018-19_files/figure-html/unnamed-chunk-27-1.png" width="672" /> This just pipes <code>rt_data</code> through, filters out anything that’s not <em>bilingual</em>, and then plots it. So you can see, there’s no dataset in the usual place in the ggplot call, because that comes earlier.</p>
+</div>
+<div id="more-subsetting" class="section level2">
+<h2>More subsetting</h2>
+<p>We can also put different conditions on subsets. The <code>!=</code> operator means not equals to. So this would give us the same thing as before:</p>
+<pre class="r"><code>bl_data_dplyr = rt_data %&gt;%
+  filter(group != &quot;monolingual&quot;)</code></pre>
+<p>Maybe we just want to look at people who responded in under a second. We could create a dataset that can account for this using the <code>&lt;</code> sign (you can also use <code>&gt;</code> than).</p>
+<pre class="r"><code>quick_rt_data = rt_data %&gt;%
+  filter(rt &lt; 1000)</code></pre>
+<p>Or plot this directly:</p>
+<pre class="r"><code>rt_data %&gt;%
+  filter(rt &lt; 1000) %&gt;%
+  ggplot(aes(x=group, y=rt, colour=group)) + geom_boxplot() </code></pre>
+<p><img src="HSS8005_session3_notebook_2018-19_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
+<p>If you’ve finished all of this, try making some extra graphs of your own and changing the parameters using the cheatsheets above. Then try outputting this document to pdf, word or html.</p>
+</div>
+</div>
+<div id="r-markdown" class="section level1">
+<h1>R markdown</h1>
+<p>You can convert this entire notebook into a pdf, html or Word document by going to the little triangle drop-down menu next to <strong>Preview</strong> and choosing one of the <strong>Knit to…</strong> options. This is how I’d like you to submit your assessment for class, but it is also handy for writing up your quantitative work, as your R code is embedded in your document.</p>
+<p>As you start to publish your work, you won’t want the R code itself to show, but just the output. This is easy to do by setting the option <code>echo = FALSE</code>. Try previewing the document, or knitting the document to pdf, html or word, and compare the chunk below with earlier ones:</p>
+<pre><code>## [1] 4</code></pre>
+<p>Can you see this stops it from replicating the code?</p>
+<p>Markdown is a very simple language. You use <em>stars for italics</em>, and you use <strong>double stars for bold</strong>. Hashes indicate new sections and the level of that section (i.e. two hashes are a subsection). Check out the R markdown cheatsheet <a href="https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf">here</a>. You can see I just made a clickable link in the previous sentence. Have a look at what that looks like in your knitted output. For your next task, have a play around with different options in R markdown.</p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

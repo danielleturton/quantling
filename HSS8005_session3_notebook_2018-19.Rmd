@@ -1,6 +1,8 @@
 ---
-title: "HSS8005: Quantitative Linguistics - Session 3"
-output: html_notebook
+title: 'HSS8005: Quantitative Linguistics - Session 3'
+output:
+  html_document:
+    df_print: paged
 ---
 
 ---
