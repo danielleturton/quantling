@@ -1,9 +1,18 @@
 ---
 title: 'HSS8005: Quantitative Linguistics - Session 3'
+author: "Semester 2 2018-19, Danielle Turton"
 output:
   html_document:
     df_print: paged
+    toc: yes
+    toc_depth: '2'
+  html_notebook:
+    theme: cosmo
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
 ---
+  
 
 ---
 # Last week
