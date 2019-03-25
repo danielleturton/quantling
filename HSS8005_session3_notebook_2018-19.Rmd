@@ -2,15 +2,15 @@
 title: 'HSS8005: Quantitative Linguistics - Session 3'
 author: "Semester 2 2018-19, Danielle Turton"
 output:
-  html_document:
-    df_print: paged
-    toc: yes
-    toc_depth: '2'
   html_notebook:
     theme: cosmo
     toc: yes
     toc_depth: 2
     toc_float: yes
+  html_document:
+    df_print: paged
+    toc: yes
+    toc_depth: '2'
 ---
   
 ---
@@ -18,12 +18,12 @@ output:
 Last week, we looked at categorical variables from the dialect dataset.  We learned how to look at data summaries, and make graphs in both Base R and `ggplot2`.
 
 # Today
-Today we will look at a continuous linguistic variable, reaction time.  The following (made up) dataset contains reaction time data from a word recognition task.  Bilingual and monolingual speakers were given a task where they have to decide if a word is part of their language or not.  The reaction time measures how long it took them to decide.  Download the dataset for today by right clicking [here](HERE) and selecting *save link/target as*.
+Today we will look at a continuous linguistic variable, reaction time.  The following (made up) dataset contains reaction time data from a word recognition task.  Bilingual and monolingual speakers were given a task where they have to decide if a word is part of their language or not.  The reaction time measures how long it took them to decide.  Download the dataset for today by right clicking [here](https://github.com/danielleturton/quantling/raw/master/HSS8005_reactiondata.txt) and selecting *save link/target as*.
 
 # Notebook vs. script
 Today I would like you to try running the commands in your own script, rather than using the R notebook.
 
-If you would really prefer to use the R notebook, you can find it [here](HERE).
+If you would really prefer to use the R notebook, you can find it [here](https://github.com/danielleturton/quantling/raw/master/HSS8005_session3_notebook_2018-19.Rmd).
 
 ## Packages
 As usual, the first thing we want to do before we start is load in the relevant packages for today.
