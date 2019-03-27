@@ -2,15 +2,15 @@
 title: 'HSS8005: Quantitative Linguistics - Session 1 notebook'
 author: "Semester 2 2018-19, Danielle Turton"
 output:
-  html_document:
-    df_print: paged
-    toc: yes
-    toc_depth: '2'
   html_notebook:
     theme: cosmo
     toc: yes
     toc_depth: 2
     toc_float: yes
+  html_document:
+    df_print: paged
+    toc: yes
+    toc_depth: '2'
 ---
   
 You can find the slides from the first part of class [here](HSS8005_session1_slides_2018-19.html){target="_blank"} or in [pdf here](https://github.com/danielleturton/quantling/blob/master/slides/HSS8005_session1_slides_2018-19.pdf){target="_blank"} 
