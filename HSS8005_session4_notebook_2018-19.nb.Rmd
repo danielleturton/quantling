@@ -17,12 +17,18 @@ output:
 # Today's data
 Today we'll be working with a dataset coded by my Stage 3 students on SEL3094 *Accents of English* from last year.  It is the sociolinguistic variable (ing), so whether speakers say a word like *dancing* with an alveolar [n] or a velar [ŋ].  The data is taken from interviews with Tyneside English speakers, from the DECTE corpus.
 
+
+Download the data for today by right-clicking [here](https://github.com/danielleturton/quantling/raw/master/ing.csv).
+
+You can use your own script today, or you can use the R notebook by right clicking [here](https://github.com/danielleturton/quantling/raw/master/HSS8005_session4_notebook_2018-19.nb.html) and saving in the same folder as our data.
+
 Load in our usual packages:
 ```{r}
 library(dplyr)
 library(ggplot2)
 ```
 
+If you're not using the notebook, set the working directory to the folder you're currently working in, or make sure the path below is correct when calling in your data.
 
 Let's load in our data:
 ```{r}
